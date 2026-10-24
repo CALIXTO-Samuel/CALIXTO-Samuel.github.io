@@ -2,14 +2,13 @@
     box-sizing: border-box;
 }
 
-
 #titulo-principal {
     text-align: center;
 }
 
-h1{
+h1 {
     color: blue;
-    font-size:xx-large;
+    font-size: xx-large;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     border: double;
     border-color: rgb(35, 75, 148);
@@ -26,37 +25,44 @@ h2 {
     padding: 5px;
 }
 
-espaco{
-    color:white;
+espaco {
+    color: white;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     size: 2px;
 }
 
-footer{
+footer {
     font-family: 'Courier New', Courier, monospace;
     font-style: italic;
-    font-size:larger;
-    background-color:rgb(125, 216, 219);
-    color:black;
+    font-size: larger;
+    background-color: rgb(125, 216, 219);
+    color: black;
     font-display: block;
+    padding: 20px;
+    overflow-wrap: anywhere;
 }
 
-p{
-    color:black;
+p {
+    color: black;
     font-style: normal;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-span{
+span {
     font-weight: bold;
     text-transform: uppercase;
-    color:rgb(82, 187, 191);
+    color: rgb(82, 187, 191);
 }
 
-li{
-    color:black;
+li {
+    color: black;
     font-style: normal;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+.destaque {
+    font-weight: bold;
+    color: cadetblue;
 }
 
 body {
@@ -85,8 +91,46 @@ body > img {
     height: auto;
 }
 
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 15px;
+    max-width: 100%;
+}
 
-.destaque {
-    font-weight: bold;
-    color: cadetblue;
+.galeria img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+footer a {
+    display: inline-block;
+    margin: 5px;
+}
+
+@media (max-width: 600px) {
+    main {
+        padding: 12px;
+    }
+
+    h1 {
+        font-size: x-large;
+    }
+
+    .galeria {
+        gap: 10px;
+    }
+
+    .galeria img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    footer a {
+        display: block;
+        overflow-wrap: anywhere;
+    }
 }
